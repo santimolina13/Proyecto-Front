@@ -84,7 +84,13 @@
     
 }
 
-
+@media screen and (max-width: 885px){
+    .worklist-contenedor{
+        width: 90%;
+        height: 65%;
+        justify-content: center;
+    }
+}
 
 
 
