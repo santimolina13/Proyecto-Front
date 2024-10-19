@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--color-blanco);
+    box-sizing: border-box;
+}
+
+.worklist-contenedor{
+    
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a1d21;
+    box-shadow: 0px 0px 3px var(--color-blanco);
+    color: var(--color-texto);
+    border-radius: 10px;
+    
+}
+.home-titulo{
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-blanco);
+}
+.worklist-contenedor-card{
+    
+    width: 60%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 10px;
+    color: var(--color-blanco);
+    overflow: auto;
+}
+
+.item-workspace{
+    
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    box-shadow: 0px 0px 3px var(--color-blanco);
+    border-radius: 6px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    
+    
+    
+}
+.Mis_entornos_titulo{
+    font-weight: 400;
+    
+    color: var(--color-blanco);
+}
+
+.item-name{
+    color: var(--color-blanco);
+}
+.item-workspace-link{
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+.botonera-btn-link{
+    color: var(--color-fondo-2);
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 600;
+    background-color: var(--color-blanco);
+    margin-bottom: 2%;
+}
+.botonera-btn-link:hover{
+    background-color: var(--color-hover);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    transform: scale(1.05); 
+}
+
+.item-workspace:hover{
+    box-shadow: 0px 0px 6px var(--color-hover); 
+    
+}
+
+
+
+
+
+@media screen and (max-width: 485px) {
+    .worklist-contenedor{
+        width: 90%;
+        
+    }
+    .worklist-contenedor-card{
+        width: 90%;
+        min-height: 50%;
+        justify-content: space-around;
+    }
+    .item-workspace-link{
+        display: none;
+    }
+    .item-workspace{
+        justify-content: center;
+    }
+    
+}
