@@ -91,7 +91,8 @@
 @media screen and (max-width: 485px) {
     .worklist-contenedor{
         width: 90%;
-        
+        height: 65%;
+        justify-content: center;
     }
     .worklist-contenedor-card{
         width: 90%;
