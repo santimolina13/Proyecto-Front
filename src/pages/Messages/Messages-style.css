@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: start;
     background-color: transparent;
-    gap: 20%;
+    
 }
 .canal-list{
     display: flex;
@@ -73,6 +73,9 @@
     background-color: transparent;
     text-align: center;
     margin: 4%;
+    font-size: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 .item-canal-list{
     background-color: var(--color-fondo-1);
