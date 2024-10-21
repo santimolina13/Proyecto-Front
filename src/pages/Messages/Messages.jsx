@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import "./Messages-style.css";
 import RenderCanales from '../../componentes/ListaDeCanales/RenderCanales';
 import RenderChat from '../../componentes/Chatsection/RenderChat';
 import { obtenerWorkspacesPorId, obtenerMensajesPorCanalId } from '../../../dataworkspace'; 
 import CrearCanal from '../../componentes/AgregarCanal/CrearCanal';
 import NuevoMensaje from '../../componentes/NuevoMensaje/NuevoMensaje';
-import { MdAdd } from "react-icons/md";
+import { MdAdd, MdArrowBack } from "react-icons/md";
+
 
 const Messages = () => {
     const { workspace_id, channels_id } = useParams()
@@ -49,13 +50,18 @@ const Messages = () => {
 
     return (
         <div className='chatpages'>
+            
             <div className='contenedor-prueba'>
                 <aside className='aside-canales'>
-                    <h2 className='aside-canales-h2'>{nombrews.name}</h2>
+                    <div className='falsonav'><Link to='/' className='volver_inicio_Link'><MdArrowBack className="volver_inicio"/></Link>
+                    <h2 className='aside-canales-h2'>{nombrews.name}</h2></div>
+                    
                     <RenderCanales workspacedata={workspacedata} />
                     {openFormNewChannel?(<CrearCanal workspacedata={workspacedata} onChannelCreated={handleChannelCreated} setopenFormNewChannel={toggleOpenFormNewChannel} />):
                     <span type="button" onClick={toggleOpenFormNewChannel} className='aside-canales-crear'><MdAdd className='aside-canales-crear-icon'/></span>}
+                    
                 </aside>
+                
                 <main className='main-messages'>
                 
                     <section className='section-mensajes'>
